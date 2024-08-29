@@ -1,13 +1,10 @@
-# FastAPI-Nextjs
-[![codecov](https://codecov.io/gh/Nneji123/fastapi-webscraper/graph/badge.svg?token=UsIESnIqm6)](https://codecov.io/gh/Nneji123/fastapi-webscraper)
-
-[![Python Tests](https://github.com/Nneji123/fastapi-webscraper/actions/workflows/test.yml/badge.svg)](https://github.com/Nneji123/fastapi-webscraper/actions/workflows/test.yml)
-
-[![Python Tests](https://github.com/Nneji123/fastapi-webscraper/actions/workflows/test.yml/badge.svg)](https://github.com/Nneji123/fastapi-webscraper/actions/workflows/test.yml)
-
-
 ## Introduction
-This project serves as a comprehensive demonstration of building a robust API using cutting-edge technologies, including FastAPI, SQLModel, PostgreSQL, Redis, Next.js, Docker, and Docker Compose. The goal is to showcase the implementation of essential API features, such as rate limiting and pagination, while maintaining a modular and scalable architecture.
+This project serves as a comprehensive demonstration of building a robust 
+API using cutting-edge technologies, including PostgreSQL, Next.js, 
+Docker, and Docker Compose. 
+The goal is to showcase the implementation of essential API features, 
+such as rate limiting and pagination, while maintaining a modular and 
+scalable architecture.
 
 ## Technologies Used
 
@@ -19,12 +16,31 @@ This project serves as a comprehensive demonstration of building a robust API us
 
 - **Docker Compose:** A tool for defining and running multi-container Docker applications.
 
+- **Prisma:** to manage PostgreSQL
+
+### Database setup
+```
+pnpm prisma init
+```
+
+```
+pnpm prisma migrate dev --name {migration-name}
+```
+
+Apply migrations
+```
+pnpm prisma migrate deploy
+```
+
+Create client
+```
+pnpm prisma generate
+```
 
 ## Features
 
 1. **Database Integration:**
    - Integrated with a PostgreSQL database using prisma.
-   - Defined data models for towns and people.
 
 2. **Data Pagination:**
    - Implemented pagination for large datasets for improved performance.
