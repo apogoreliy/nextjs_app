@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: bitnami/postgresql:13.3.0
+    restart: always
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
